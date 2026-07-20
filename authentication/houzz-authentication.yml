@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://help.houzz.com/s/topic/0TO44000000UgcMGAS/houzz-seller-api?language=en_US
+docs: https://help.houzz.com/s/topic/0TO44000000UgcMGAS/houzz-seller-api?language=en_US
+api: Houzz Seller & Vendor Commerce API
+notes: >-
+  Derived from Houzz seller/vendor API documentation and consistent third-party
+  integration guides (Sellercloud, Extensiv, CommerceBear). No first-party
+  OpenAPI is published, so scheme names below are descriptive of the documented
+  credential model, not machine-read from a spec. Access is partner-gated:
+  enable under Settings > API in the Houzz dashboard, or request via
+  sellerapi@houzz.com. Houzz Vendor and Houzz Seller are distinct programs and
+  a given integration must select the correct one.
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+  oauth2_flows: []
+  gated: true
+  access_request: sellerapi@houzz.com
+schemes:
+- name: HouzzAppCredentials
+  type: apiKey
+  scheme: token
+  description: >-
+    Static per-account credential set issued in the Houzz seller/vendor
+    dashboard. Integrations present three values collected from Settings > API:
+    App ID (application identifier), Token (secret access token), and User Name
+    (account identifier). Sent by the integrating platform to authenticate
+    catalog, inventory, pricing, and order calls.
+  credentials:
+  - App ID
+  - Token
+  - User Name
+  sources:
+  - https://help.houzz.com/s/topic/0TO44000000UgcMGAS/houzz-seller-api?language=en_US
