@@ -1,8 +1,19 @@
 aid: houzz
 name: Houzz
-description: 'Houzz is a company surfaced as a portfolio company of bond-capital, craft-ventures, ggv-capital,
-  iconiq-capital and added to the API Evangelist network as a stub for enrichment. Sector: ecommerce.
-  This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Houzz is a home renovation and design platform that connects homeowners with
+  home professionals, products, and design inspiration, and operates Houzz Pro,
+  an all-in-one business management SaaS for contractors and design
+  professionals (3D floor plans, takeoffs, estimates, invoices, scheduling, CRM,
+  and marketing). For commerce, Houzz runs a marketplace and exposes an official
+  Seller/Vendor Commerce API (opened to third-party partners in 2016) that lets
+  merchants sync product listings, inventory, pricing, and orders. API access is
+  gated: sellers enable it under Settings > API in the Houzz dashboard or request
+  it via sellerapi@houzz.com, then authenticate integrations with an App ID,
+  Token, and User Name. Houzz does not publish a general-purpose public developer
+  portal, OpenAPI spec, or first-party SDKs; integration is handled through the
+  Seller/Vendor programs and Houzz Pro's pre-built integrations (QuickBooks,
+  Zapier, Gmail, Google Calendar/Drive, Gusto).
 url: https://raw.githubusercontent.com/api-evangelist/houzz/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,13 +24,53 @@ x-backed-by:
 - iconiq-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-notes: >-
+  Seller/Vendor Commerce API is official but partner-gated (no public OpenAPI or
+  developer portal). Third-party unofficial wrappers exist (e.g. hanbiji/Houzz-Api)
+  but are not first-party. No public /.well-known documents (all catch-all HTML).
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://st.hzcdn.com/static/apple-touch-icon-precomposed.png
 tags:
 - Company
 - Ecommerce
-apis: []
+- Marketplace
+- Home Improvement
+- Interior Design
+- Home Renovation
+- Furniture
+- SaaS
+apis:
+- name: Houzz Seller & Vendor Commerce API
+  description: >-
+    Official Houzz commerce API for third-party marketplace partners. Lets
+    sellers and vendors sync product catalog/listings, update inventory levels
+    and pricing, and retrieve and manage orders. Access is gated (enable under
+    Settings > API in the Houzz dashboard, or email sellerapi@houzz.com);
+    integrations authenticate with an App ID, Token, and User Name. Houzz
+    Vendor and Houzz Seller are distinct programs selected per integration.
+  humanURL: https://help.houzz.com/s/topic/0TO44000000UgcMGAS/houzz-seller-api?language=en_US
+  baseURL: https://api.houzz.com
+  tags:
+  - Ecommerce
+  - Marketplace
+  - Commerce
+  properties:
+  - type: Authentication
+    url: authentication/houzz-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -28,3 +79,28 @@ maintainers:
 common:
 - type: Website
   url: https://houzz.com
+- type: APIReference
+  url: https://help.houzz.com/s/topic/0TO44000000UgcMGAS/houzz-seller-api?language=en_US
+- type: Support
+  url: https://help.houzz.com
+- type: Blog
+  url: https://www.houzz.com/magazine
+- type: Pricing
+  url: https://www.houzz.com/houzz-pro/pricing
+- type: SignUp
+  url: https://www.houzz.com/signup
+- type: Login
+  url: https://www.houzz.com/signin
+- type: TermsOfService
+  url: https://www.houzz.com/termsOfUse
+- type: PrivacyPolicy
+  url: https://www.houzz.com/privacyPolicy
+- type: Authentication
+  url: authentication/houzz-authentication.yml
+- type: DomainSecurity
+  url: security/houzz-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
