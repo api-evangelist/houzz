@@ -46,6 +46,15 @@ modified: '2026-07-19'
 image: https://st.hzcdn.com/static/apple-touch-icon-precomposed.png
 tags:
 - Company
+- E-Commerce
+- Marketplace
+- Home Improvement
+- Interior Design
+- Home Renovation
+- Furniture
+- Software-as-a-Service
+tags_raw:
+- Company
 - Ecommerce
 - Marketplace
 - Home Improvement
@@ -65,6 +74,10 @@ apis:
   humanURL: https://help.houzz.com/s/topic/0TO44000000UgcMGAS/houzz-seller-api?language=en_US
   baseURL: https://api.houzz.com
   tags:
+  - E-Commerce
+  - Marketplace
+  - Commerce
+  tags_raw:
   - Ecommerce
   - Marketplace
   - Commerce
