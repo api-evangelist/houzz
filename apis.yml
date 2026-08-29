@@ -28,6 +28,17 @@ x-notes: >-
   Seller/Vendor Commerce API is official but partner-gated (no public OpenAPI or
   developer portal). Third-party unofficial wrappers exist (e.g. hanbiji/Houzz-Api)
   but are not first-party. No public /.well-known documents (all catch-all HTML).
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
