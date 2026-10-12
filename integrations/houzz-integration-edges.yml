@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/houzz/integrations
+- https://n8n.io/integrations/houzz/
+- https://composio.dev/toolkits/houzz
+- https://monid.ai/tools/houzz
+checked:
+- https://composio.dev/toolkits/houzz
+- https://monid.ai/tools/houzz
+- https://n8n.io/integrations/houzz/
+- https://zapier.com/apps/houzz/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
